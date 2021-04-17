@@ -1,0 +1,46 @@
+<html>
+<head>
+    <title>Phone Number Authentication with Firebase Web</title>
+</head>
+<body>
+<h1>Enter number to create account</h1>
+
+    <input type="text" id="number" placeholder="+923********">
+    <div id="recaptcha-container"></div>
+
+    <button type="button" onclick="phoneAuth();">SendCode</button>
+<br>
+<h1>Enter Verification code</h1>
+    <input type="text" id="verificationCode" placeholder="Enter verification code">
+    <button type="button" onclick="codeverify();">Verify code</button>
+
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-app.js"></script>
+
+  <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+  <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-analytics.js"></script>
+
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-firestore.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+<script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+    apiKey: "AIzaSyAMHVap0EnmpEpVLNV4lGIsZcKd20z6KYs",
+    authDomain: "mo7amy-7e97c.firebaseapp.com",
+    projectId: "mo7amy-7e97c",
+    storageBucket: "mo7amy-7e97c.appspot.com",
+    messagingSenderId: "393733132302",
+    appId: "1:393733132302:web:127784ee5f511465206c5f",
+    measurementId: "G-R0B811XHW1"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+</script>
+<%- include('hi.ejs') %>
+</body>
+</html>
